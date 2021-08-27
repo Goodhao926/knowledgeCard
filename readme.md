@@ -1,6 +1,14 @@
-# 基于Android系统的记忆卡片	
+# 基于Android系统的记忆卡片
 
-<img src="https://i.loli.net/2021/08/27/IZN9x7deSfwlFhD.jpg" alt="cecb9a580364a655ed8397f24a7acf8" style="zoom:33%;" /><img src="https://i.loli.net/2021/08/27/gtaM5oy3EdkmDpb.jpg" alt="c4c483e40bb36d4f6156a182e3a027e" style="zoom:33%;" /><img src="https://i.loli.net/2021/08/27/CjNEK7tFeiT3nwJ.jpg" alt="5fb104168ebb1b8f4e35041ff8fe2e0" style="zoom:33%;" />
+
+
+
+
+
+
+|                                                              |                                                              |                                                              |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| <img src="https://i.loli.net/2021/08/27/IZN9x7deSfwlFhD.jpg" alt="cecb9a580364a655ed8397f24a7acf8" style="zoom:33%;" /> | <img src="https://i.loli.net/2021/08/27/gtaM5oy3EdkmDpb.jpg" alt="c4c483e40bb36d4f6156a182e3a027e" style="zoom:33%;" /> | <img src="https://i.loli.net/2021/08/27/CjNEK7tFeiT3nwJ.jpg" alt="5fb104168ebb1b8f4e35041ff8fe2e0" style="zoom:33%;" /> |
 
 
 
