@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">KnowledgeCard</string>
+    <string name="YOUDAO_VOICE_EN">https://dict.youdao.com/dictvoice?type=1&amp;audio=</string>
+    <string name="YOUDAO_VOICE_USA">https://dict.youdao.com/dictvoice?type=0&amp;audio=</string>
+</resources>
