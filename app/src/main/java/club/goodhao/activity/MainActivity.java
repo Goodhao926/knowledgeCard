@@ -1,13 +1,18 @@
 package club.goodhao.activity;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.Manifest;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
@@ -33,9 +38,10 @@ import club.goodhao.entity.ItemCardBag;
 import club.goodhao.model.Card;
 import club.goodhao.model.CardBag;
 import club.goodhao.utils.MyApplication;
-
+import club.goodhao.utils.QRUtil;
 
 public class MainActivity extends BaseActivity {
+    private static final int PERMISSION_REQUESTCODE = 100;
     private RecyclerView recyclerView;
     private List<ItemCardBag> cardBagList = new ArrayList<>();
     private CardBagAdapter cardBagAdapter;
@@ -68,6 +74,7 @@ public class MainActivity extends BaseActivity {
         cardBagAdapter = new CardBagAdapter(cardBagList);
         recyclerView.setAdapter(cardBagAdapter);
         ImageView btn_plus = findViewById(R.id.btn_plus);
+        ImageView btn_scan = findViewById(R.id.iv_scan);
         btn_plus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -92,6 +99,31 @@ public class MainActivity extends BaseActivity {
             }
         });
 
+        // event bind
+        btn_scan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                requestPermission();
+                QRUtil.start();
+            }
+        });
+
+
+    }
+
+    private void requestPermission(){
+        // 申请权限
+        String[] strings = {Manifest.permission.CAMERA};
+        if(ContextCompat.checkSelfPermission(MyApplication.getContext(), Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED){
+            ActivityCompat.requestPermissions(this,strings
+                    , PERMISSION_REQUESTCODE);
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        Log.e(TAG, "onRequestPermissionsResult: " + requestCode );
     }
 }
 

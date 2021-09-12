@@ -9,7 +9,7 @@
     tools:context=".activity.MainActivity">
 
     <RelativeLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="27dp"
         android:layout_gravity="center_vertical"
         android:layout_marginTop="16.84dp"
@@ -33,15 +33,27 @@
             android:text="知识卡片"
             android:textColor="#ff000000"
             android:textSize="16sp" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            >
+            <ImageView
+                android:id="@+id/iv_scan"
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/ic_scan_icon"
+                />
 
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="match_parent"
-            android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="200dp"
-            android:layout_marginRight="30dp"
-            android:src="@drawable/more" />
+            <ImageView
+                android:id="@+id/iv_more"
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="5dp"
+                android:src="@drawable/more" />
+        </LinearLayout>
 
 
     </RelativeLayout>
